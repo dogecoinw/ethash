@@ -27,8 +27,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/ethereumfair/go-ethereum/common"
 )
 
 func init() {
@@ -78,11 +77,11 @@ var validBlocks = []*testBlock{
 }
 
 var invalidZeroDiffBlock = testBlock{
-	number:      61440000,
-	hashNoNonce: crypto.Sha3Hash([]byte("foo")),
-	difficulty:  big.NewInt(0),
-	nonce:       0xcafebabec00000fe,
-	mixDigest:   crypto.Sha3Hash([]byte("bar")),
+	number: 61440000,
+	//hashNoNonce: crypto.Sha3Hash([]byte("foo")),
+	difficulty: big.NewInt(0),
+	nonce:      0xcafebabec00000fe,
+	//mixDigest:   crypto.Sha3Hash([]byte("bar")),
 }
 
 func TestEthashVerifyValid(t *testing.T) {
