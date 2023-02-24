@@ -1,4 +1,4 @@
-module github.com/FranckStone/ethash
+module github.com/dogecoinw/ethash
 
 go 1.19
 
